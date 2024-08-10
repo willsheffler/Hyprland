@@ -434,7 +434,7 @@ void CLayerSurface::startAnimation(bool in, bool instant) {
 
         float  closest = std::numeric_limits<float>::max();
         size_t leader  = force;
-        if (leader == -1) {
+        if (leader == (size_t)-1) {
             for (size_t i = 0; i < 4; ++i) {
                 float dist = MIDDLE.distance(edgePoints[i]);
                 if (dist < closest) {

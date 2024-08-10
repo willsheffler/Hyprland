@@ -479,7 +479,7 @@ SWorkspaceIDName getWorkspaceIDNameFromString(const std::string& in) {
                 currentItem = remains - 1;
 
                 // clamp
-                if (currentItem < 0) {
+                if ((int)currentItem < 0) {
                     currentItem = 0;
                 } else if (currentItem >= validWSes.size()) {
                     currentItem = validWSes.size() - 1;
@@ -503,7 +503,7 @@ SWorkspaceIDName getWorkspaceIDNameFromString(const std::string& in) {
                 // sanitize
                 if (currentItem >= validWSes.size()) {
                     currentItem = currentItem % validWSes.size();
-                } else if (currentItem < 0) {
+                } else if ((int)currentItem < 0) {
                     currentItem = validWSes.size() + currentItem;
                 }
             }
